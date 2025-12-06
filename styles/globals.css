@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+
+:root {
+  --bg-1: #05070d;
+  --bg-2: #0b0f1c;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-strong: rgba(255, 255, 255, 0.08);
+  --accent-1: #032069;
+  --accent-2: #1d5aff;
+  --text-primary: #e6ecf7;
+  --text-secondary: #9aa6bc;
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  background:
+    linear-gradient(135deg, var(--bg-1), var(--bg-2)),
+    radial-gradient(circle at 10% 20%, rgba(3, 32, 105, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(29, 90, 255, 0.05), transparent 28%),
+    var(--noise);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f162e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2b46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3a5d;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+}
+
+/* Cultural shadow */
+.shadow-cultural {
+  box-shadow: 0 16px 45px rgba(110, 243, 255, 0.12);
+}
+
+/* Text styles */
+.text-display {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.text-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.text-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Color variables */
+.text-text-primary {
+  color: var(--text-primary);
+}
+
+.text-text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-accent-primary {
+  color: var(--accent-1);
+}
+
+.text-accent-secondary {
+  color: var(--accent-2);
+}
+
+/* Shadow utilities */
+.shadow-card {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-hover {
+  box-shadow: 0 26px 70px rgba(110, 243, 255, 0.14);
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  .text-display {
+    font-size: 2.5rem;
+  }
+  
+  .text-title {
+    font-size: 2rem;
+  }
+  
+  .text-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .text-display {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+  
+  .text-title {
+    font-size: 1.5rem;
+  }
+  
+  .text-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  /* Reduce padding on mobile */
+  .container-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Better button sizing on mobile */
+  .btn-mobile {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Improve card spacing */
+  .card-mobile {
+    margin-bottom: 1rem;
+  }
+  
+  /* Reduce section padding for elegance */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  /* Better spacing for hero */
+  .hero-mobile {
+    min-height: 80vh !important;
+    padding-top: 4rem !important;
+  }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
