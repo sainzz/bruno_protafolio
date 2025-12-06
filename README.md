@@ -1,11 +1,7 @@
 # Portafolio de Bruno Sainz
 
-Sitio web estático de marca personal para Bruno Sainz, ingeniero civil en Ciencia de Datos. Presenta su identidad profesional, habilidades, proyectos y medios de contacto en una sola pantalla sin scroll, siguiendo la pauta de marca personal.
+Sitio web estático de marca personal para Bruno Sainz, ingeniero civil en Ciencia de Datos. 
 
-## Propósito e identidad
-- **Quién representa:** Bruno Sainz, enfocado en IA aplicada (chatbots, visión por computadora) y seguridad.
-- **Objetivo:** Mostrar perfil, proyectos y formas de contacto de manera clara y rápida.
-- **CV:** Disponible en `public/cv-bruno-sainz.pdf`.
 
 ## Secciones del sitio
 - **Hero / Perfil:** Nombre, rol y presentación breve con enfoque en IA, visión y ciberseguridad.
