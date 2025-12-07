@@ -2,6 +2,8 @@
 
 Sitio web estático de marca personal para Bruno Sainz, ingeniero civil en Ciencia de Datos. 
 
+VISUALIZAR EN: https://brunoprotafoliovercel.vercel.app
+
 
 ## Secciones del sitio
 - **Hero / Perfil:** Nombre, rol y presentación breve con enfoque en IA, visión y ciberseguridad.
